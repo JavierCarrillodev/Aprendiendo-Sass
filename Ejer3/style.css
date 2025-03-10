@@ -1,15 +1,14 @@
-body {
+#cabecera body {
   margin: 5%;
-  padding: 0;
+  padding: 12%;
   width: 65vw;
+  height: 0;
 }
-
 #cabecera h1 {
   width: 120%;
   color: #4b98e0;
 }
-
-table {
+#cabecera table {
   border-collapse: collapse;
   text-align: center;
 }
@@ -36,13 +35,6 @@ tr:nth-child(7) {
   background-color: #e3b299;
 }
 
-td {
-  padding: 7px;
-  width: 150px;
-  border: 1px solid gray;
-  color: grey;
-}
-
 #footer h1 {
   font-size: 30px;
 }
@@ -60,10 +52,6 @@ td {
 }
 #footer h6 {
   font-size: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
 }
 
 #footer h1 {
@@ -90,8 +78,45 @@ h1, h2, h3, h4, h5, h6 {
   color: #ff8c00;
 }
 
+body {
+  margin: 5%;
+  padding: 12%;
+  width: 65.8vw;
+  height: 0;
+}
+
+#cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#cabecera h1 {
+  width: 100%;
+  color: #4b98e0;
+  text-align: center;
+  border: 1px solid gold;
+  background-color: green;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  width: 150px;
+  border: 1px solid gray;
+  color: grey;
+}
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  text-align: center;
+}
+
 #cabecera table {
-  width: 40%;
+  width: 150%;
 }
 
 @media (min-width: 600px) {
