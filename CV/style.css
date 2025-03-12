@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: #333;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+#nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+#nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+#nav ul li a:hover {
+  color: #ff5733;
+}
+
+header {
+  width: 50%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+  background-color: #731e1e;
+  padding: 25%; /* Espaciado alrededor del contenido */
+  padding-bottom: 1%;
+}
+header img {
+  width: 40vw;
+  position: relative;
+  bottom: 55px;
+  right: 43%;
+  padding-bottom: 5%;
+  border-radius: 50%;
+}
+header h3, header h4 {
+  width: 10vw;
+  font-weight: bold;
+}
+header h3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 55px;
+  right: 40%;
+  white-space: nowrap;
+  font-size: 6vw;
+}
+header h4 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 10px;
+  right: 60%;
+  white-space: nowrap;
+}
+
+#header h2 {
+  position: relative;
+  top: -290px;
+}
+
+#wrapper {
+  margin: 5%;
+  margin-top: 65%;
+}
+
+h1 {
+  color: green;
+  font-size: 10vw;
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+}
+
+#education {
+  text-align: center;
+}
+#education h2 {
+  color: cadetblue;
+}
+#education h3 {
+  font-weight: normal;
+}
+
+#Email {
+  text-align: center;
+}
+#Email img {
+  width: 20%;
+}
+
+#conte {
+  display: flex;
+  text-align: center;
+}
+
+#github img {
+  width: 15%;
+}
+
+#LinkedIn img {
+  width: 15%;
+}
+
+#contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contacto div {
+  margin: 15px 0;
+}
+
+#Email img, #github img, #LinkedIn img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#work h2 {
+  color: steelblue;
+}
+
+p, ul, li {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (min-width: 600px) {
+  #wrapper {
+    margin-top: 55%;
+  }
+  #wrapper h1 {
+    font-size: 6vw;
+  }
+  header {
+    bottom: 64%;
+  }
+  header img {
+    bottom: 80%;
+    width: 30vw;
+    height: 100%;
+  }
+  header h3 {
+    bottom: 100%;
+  }
+  header h4 {
+    bottom: 56%;
+    font-size: 3.5vw;
+    margin-left: 3%;
+  }
+}
+@media (min-width: 1000px) {
+  header {
+    bottom: 65%;
+  }
+  header img {
+    bottom: 1400%;
+    width: 20vw;
+    height: 1230%;
+  }
+  header h3 {
+    bottom: 1500%;
+    margin-left: 15%;
+    font-size: 4vw;
+  }
+  header h4 {
+    bottom: 1200%;
+    font-size: 3.5vw;
+    margin-left: 1%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
