@@ -46,7 +46,7 @@ header {
   top: 0;
   flex-direction: row;
   background-color: #731e1e;
-  padding: 25%; /* Espaciado alrededor del contenido */
+  padding: 25%;
   padding-bottom: 1%;
 }
 header img {
@@ -197,6 +197,9 @@ p, ul, li {
   }
 }
 @media (min-width: 1000px) {
+  #container > div {
+    scroll-margin-top: 360px;
+  }
   #wrapper {
     margin-left: 50%;
     width: 40%;
@@ -214,6 +217,15 @@ p, ul, li {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    width: 100%;
+  }
+  #nav ul li {
+    border-bottom: 2px solid #65a8e5;
+    margin: 0 14% 0 14%;
+  }
+  #nav ul li a:hover {
+    background-color: #a9d0ef;
+    color: #089e22;
   }
   header {
     display: flex;

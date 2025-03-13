@@ -20,3 +20,7 @@
   flex-direction: column;
   text-align: center;
 };
+@mixin bordes{
+  border-bottom: 3px solid gray;
+
+}

@@ -9,7 +9,6 @@ body{
 
 }
 
-
 #nav {
   display: flex;
   flex-direction: row;
@@ -45,11 +44,9 @@ body{
   }
 }
 #about{
-  border-bottom: 3px solid gray;
+  @include mixins.bordes
 
-}
-#container > div{
-  scroll-margin-top: 360px;
+
 }
 
 
@@ -60,7 +57,7 @@ header {
   top: 0;
   flex-direction: row;
   background-color: #731e1e;
-  padding: 25%; /* Espaciado alrededor del contenido */
+  padding: 25%;
   padding-bottom: 1%;
   img {
     width: 40vw;
@@ -109,6 +106,7 @@ header {
 #wrapper{
   @include mixins.espacioLateralIzquierdo;
   margin-top: 65%;
+
 }
 
 h1{
@@ -118,8 +116,7 @@ h1{
 
 #education{
   div{
-  border-bottom: 3px solid gray;
-
+  @include mixins.bordes
   }
   @include mixins.centrarTexto;
   h2{
@@ -173,7 +170,7 @@ a {
   color: inherit;
 }
 #work{
-  border-bottom: 3px solid gray;
+  @include mixins.bordes;
   h2{
     color: steelblue;
     margin-right: 9%;
@@ -198,7 +195,8 @@ p,ul,li,{
       font-size: 6vw;
     }
   }
-header{
+
+  header{
   bottom: 64%;
   img{
     bottom: 80%;
@@ -239,8 +237,16 @@ header{
       display: flex;
       flex-direction: column;
       gap: 80px;
+      width: 100%;
 
-
+      li{
+        border-bottom: 2px solid #65a8e5;
+        margin: 0 14% 0 14%;
+        a:hover{
+          background-color: #a9d0ef;
+          color: #089e22;
+      }
+    }
 
     }
   }
@@ -272,7 +278,6 @@ header{
     }
 
   }
-
 }
 
 
