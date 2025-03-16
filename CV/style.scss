@@ -5,7 +5,10 @@ body{
   margin: 0;
   padding:0;
   list-style: none;
-  background-color: bisque;
+  background-color: $colordeFondo;
+}
+h1{
+  font-family: C059;
 
 }
 
@@ -13,11 +16,12 @@ body{
   display: flex;
   flex-direction: row;
   position: absolute;
-  background-color: #333;
+  background-color: #595757;
   bottom: 0;
   width: 100%;
   right:0;
   left: 0;
+
 
   ul {
     list-style-type: none;
@@ -25,10 +29,19 @@ body{
     padding: 0;
     text-align: center;
     width: 100%;
+    word-spacing: 12px;
 
+    li:hover{
+      background-color: #48aacc;
+    }
     li {
       display: inline-block;
-      margin: 0 10px;
+      margin: 1px;
+      border-bottom: 2px solid #65a8e5;
+      border: 2px solid green;
+      background-color: #2f495e;
+      border-radius: 6px;
+
 
 
       a {
@@ -37,18 +50,16 @@ body{
         font-size: 18px;
 
         &:hover {
-          color: #ff5733;
+          color: #111111;
         }
       }
     }
   }
 }
+///Se le añade el mixins de bordes para ajustarlo adecuadamente
 #about{
   @include mixins.bordes
-
-
 }
-
 
 header {
   width: 50%;
@@ -60,16 +71,17 @@ header {
   padding: 25%;
   padding-bottom: 1%;
   img {
-    width: 40vw;
+    width: 28vw;
     position: relative;
     bottom: 55px;
-    right: 43%;
-    padding-bottom: 5%;
+    right: 45%;
+    padding-bottom: 2%;
+    ///Radio que le damos a la foto para que quede mas circular
     border-radius: 50%;
   }
   h3,h4{
-    width: 10vw;
-  font-weight: bold;
+    width: 16vw;
+    font-weight: bold;
   }
   h3{
     display: flex;
@@ -78,22 +90,26 @@ header {
     bottom: 55px;
     right: 40%;
     white-space: nowrap;
-    font-size: 6vw;
+    font-size: 7vw;
   }
   h4{
     display: flex;
     flex-direction: row;
     position: relative;
     bottom: 10px;
-    right: 60%;
+    right: 70%;
     white-space: nowrap;
+    font-size: 5vw;
 
   }
 
 
 }
 
-
+///Este scroll sirve para cuando le demos a una opcion del menú no se coma una parte de la opcion que has señalado
+#container > div{
+  scroll-margin-top: 360px;
+}
 
 #header {
   h2{
@@ -102,10 +118,10 @@ header {
 
   }
 }
-
+///Le ponemos el mixins para ajustarlo al lateral izquierdo
 #wrapper{
   @include mixins.espacioLateralIzquierdo;
-  margin-top: 65%;
+  margin-top: 75%;
 
 }
 
@@ -113,7 +129,7 @@ h1{
   @include mixins.estiloH1;
   color: $colorVerdeh1;
 }
-
+///Ajustamos el apartado de educacion
 #education{
   div{
   @include mixins.bordes
@@ -127,16 +143,19 @@ h1{
   }
 }
 
+///Ajustamos los iconos
 #Email {
-  text-align: center;
-  img{
+  @include mixins.centrarTexto;
+    img{
     width: 20%;
 
   }
 }
 #conte {
- display: flex;
-  text-align: center;
+  display: flex;
+  @include mixins.centrarTexto;
+
+
 }
 #github  {
   img{
@@ -149,7 +168,7 @@ h1{
   }
 
 }
-
+///Alienamos la imagen y texto
 #contacto {
 @include mixins.alienarImagenyTexto
 }
@@ -159,6 +178,8 @@ h1{
     margin: 15px 0;
   }
 }
+
+///Le damos la anchura y la altura a los iconos
 #Email img, #github img, #LinkedIn img {
   width: 50px;
   height: auto;
@@ -188,37 +209,47 @@ p,ul,li,{
   margin: 20px 0;
 }
 
+///Responsivo para table
 @media (min-width: 600px){
+  #container > div{
+    scroll-margin-top: 360px;
+  }
   #wrapper{
     margin-top: 55%;
     h1{
       font-size: 6vw;
     }
   }
-
   header{
   bottom: 64%;
   img{
     bottom: 80%;
-    width: 30vw;
-    height: 100%;
+    width: 60vw;
+    height: 128%;
+    border-radius: 50%;
+    margin-left: 10%;
   }
   h3{
     bottom: 100%;
+    margin-left: 10%;
+    font-size: 6vw;
   }
   h4{
-    bottom: 56%;
+    bottom: 53%;
     font-size: 3.5vw;
     margin-left: 3%;
   }
+
 }
 }
 
+///Responsivo para odenador
 @media (min-width: 1000px){
   #container > div{
     scroll-margin-top: 360px;
   }
  #wrapper{
+   ///Movemos el wrapper para la derecha un 50%
    margin-left: 50%;
    width: 40%;
    margin-top: 0;
@@ -239,13 +270,17 @@ p,ul,li,{
       gap: 80px;
       width: 100%;
 
+      li:hover{
+        ///Cada vez que se ponga el cursor encima aparecera en azul
+    background-color: #48aacc;
+  }
       li{
         border-bottom: 2px solid #65a8e5;
+        border: 2px solid green;
+        background-color: #2f495e;
         margin: 0 14% 0 14%;
-        a:hover{
-          background-color: #a9d0ef;
-          color: #089e22;
-      }
+        border-radius: 6px;
+
     }
 
     }
@@ -279,5 +314,53 @@ p,ul,li,{
 
   }
 }
+
+///Responsivo para pantalla completa
+@media (min-width: 1100px){
+  #wrapper{
+    margin-left: 40%;
+    width: 40%;
+    margin-top: 0;
+    h1{
+      font-size: 2.3vw;
+    }
+    p,li{
+      font-size: 1vw;
+    }
+  }
+#nav{
+
+  ul{
+    ///Espaciado entre palabras
+    word-spacing: normal;
+    a:hover{
+      border-radius: 5px;
+      ///Transición suave
+      transition: all 0.4s ease-in-out;
+
+      transform: scale(1.3);
+    }
+  }
+}
+  header{
+    padding: 12%;
+    img{
+      width: 16vw;
+      margin-left: 250%;
+    }
+    h3{
+      font-size: 30px;
+      margin-left: 250%;
+    }
+    h4{
+      font-size: 23px;
+      margin-left: 250%;
+
+    }
+  }
+
+
+}
+
 
 
